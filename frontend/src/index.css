@@ -166,3 +166,11 @@ main {
   display: grid;
   place-items: center;
 }
+
+.product-img{
+  max-width: 320px;
+}
+ul li h2{
+  font-size: 20px;
+  margin-top: 10px;
+}
