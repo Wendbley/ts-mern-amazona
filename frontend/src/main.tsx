@@ -7,7 +7,11 @@ import Home from './pages/Home.tsx'
 import Product from './pages/Product.tsx'
 import SignIn from './pages/SignIn.tsx'
 import Cart from './pages/Cart.tsx'
+import axios from 'axios'
 
+axios.defaults.baseURL = process.env.NODE_ENV !== 'development' ? '/' : 'http://localhost:5000'
+
+console.log(axios.defaults.baseURL)
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<App />} >
     <Route index={true} element={<Home />} />
