@@ -1,30 +1,20 @@
-import { sampleProducts } from "./data"
-
+import {Outlet} from 'react-router-dom'
+import Navbar from './components/Navbar'
 
 function App() {
-  
-
-  return (
-    <>
-      <header>
-        TS Amazona
-      </header>
-      <main>
-        <ul>
-          {sampleProducts.map(product => (
-            <li key={product.slug}>
-              <img src={product.image} alt={product.name} className="product-img" />
-              <h2>{product.name}</h2>
-              <p>R{product.price}</p>
-            </li>
-          ))}
-        </ul>
-      </main>
-      <footer>
-        All rights Reseved
-      </footer>
-    </>
-  )
+	return (
+		<div className='App'>
+			<header>
+				<Navbar />
+			</header>
+			<main>
+				<div className='container'>
+					<Outlet/>
+				</div>
+			</main>
+			<footer>All rights Reseved</footer>
+		</div>
+	)
 }
 
 export default App
